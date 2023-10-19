@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Texto con DOM</title>
+</head>
+<body>
+    <h1 id="miTitulo">Texto a Cambiar</h1>
+    <button id="miBoton">Cambiar Texto</button>
+
+    <script>
+        // Accede al elemento h1 por su ID
+        const titulo = document.getElementById("miTitulo");
+
+        // Accede al botón por su ID
+        const boton = document.getElementById("miBoton");
+
+        // Agrega un controlador de clic al botón
+        boton.addEventListener("click", function() {
+            // Cambia el texto del título
+            titulo.textContent = "Texto Cambiado con DOM";
+        });
+    </script>
+</body>
+</html>

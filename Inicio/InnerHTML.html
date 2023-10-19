@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <h1 id="txt1">
+            Texto de ejemplo
+        </h1>
+        <button id="boton" onclick="cambioNombre()">
+            Click para cambiarme
+        </button>
+    </div>
+
+    <script>
+        function cambioNombre(nombre, apellido){
+        var nombre = "Victor";
+        var apellido = "Arcos";
+        document.getElementById("txt1").innerHTML = nombre + " " + apellido;
+        }
+    </script>
+
+</body>
+</html>

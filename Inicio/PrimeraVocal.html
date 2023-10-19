@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nombre = prompt("Introduce un nombre: ");
+        var vocales = "aeiou";
+        var nombre = nombre.toLowerCase();
+
+        for(var i = 0; i<=nombre.length; i++){
+            var letra = nombre[i];
+            for(var j=0; j<=vocales.length-1; j++){
+                if(letra == vocales[j]){
+                    document.write("La "+ i +" vocal es: " + letra + "<br>");
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

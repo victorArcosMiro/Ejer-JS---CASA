@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Estilo con DOM</title>
+    <style>
+        #miDiv {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            position: relative;
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Modificar Estilo con DOM</h1>
+    <div id="miDiv">Este es un div con un estilo inicial.</div>
+    <button id="cambiarEstilo">Cambiar Estilo</button>
+
+    <script>
+        // Accede al div por su ID
+        const div = document.getElementById("miDiv");
+        // Accede al botón por su ID
+        const botonCambiarEstilo = document.getElementById("cambiarEstilo");
+        // Agrega un controlador de clic al botón
+
+
+        // Accede al elemento h1 por su ID
+        const txtDiv = document.getElementById("miDiv");
+        // Accede al botón por su ID
+        
+
+        botonCambiarEstilo.addEventListener("click", function() {
+            // Cambia el estilo del fondo, tamaño y posición del div
+            div.style.backgroundColor = "lightcoral";
+            div.style.width = "300px";
+            div.style.height = "300px";
+            div.style.left = "50px";
+            div.style.top = "50px";
+
+            // Cambia el texto del título
+            txtDiv.textContent = "Este es el div MODIFICADO con DOM";
+        
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo</title>
+    </head>
+    <body>
+        <script>
+//Variable con varias variables dentro a su vez
+
+            var autor = {
+                nombre : "Ignacio", 
+                apellido : "Gros", 
+                nombreCompleto : function() {
+                    return this.nombre + " " + this.apellido;
+                }
+            };
+            alert( autor.nombreCompleto() );
+
+// fecha con formato dd/mm/aaaa
+            var fecha = new Date();
+            var dd = fecha.getDate();
+            var mm = fecha.getMonth();
+            var aa = fecha.getFullYear();
+            alert(dd+"/"+(mm+1)+"/"+aa);
+
+//Crear OBJETOS con propias funciones
+            var Persona = function (nombre) {
+                this.nombre = nombre;
+                var edad = 40;
+                this.obTenerDatos = function() {
+                    return nombre + " : " + edad;
+                }
+            }
+            var Ignacio = new Persona("Ignacio");
+            alert( Ignacio.obTenerDatos() );
+
+
+            
+
+        </script>
+    </body>
+</html>

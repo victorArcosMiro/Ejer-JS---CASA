@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Apertura de múltiples ventanas secundarias (5)</h1>
+        <input type="button" value="Abre múltiples ventanas..." onclick="for(i=0; i<5; i++) {
+            myWindow = window.open('', '', 'width=200,height=200');
+            myWindow.document.write('<html><head><title>Ventana ' + i + '</title></head><body>');
+            myWindow.document.write('Ventana ' + i);
+            myWindow.document.write('<input type=button value=Cerrar onClick=window.close()>');
+            myWindow.document.write('</body></html>');
+        }" />
+        <script>
+            //NO abrir con LiveServer
+            // PERMITIR al navegador abrir varias ventanas
+        </script>
+</body>
+</html>

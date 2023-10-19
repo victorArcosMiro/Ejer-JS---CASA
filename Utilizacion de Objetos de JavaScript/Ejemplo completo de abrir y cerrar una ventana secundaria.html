@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejemplo de apariencia de una ventana</h1><br>
+    <input type="Button" value="Abre una Ventana" onclick="myWindow=window.open('', 'Nueva Ventana', 'width=300,height=200');
+    myWindow.document.write('<html><head><title>Ventana Test</title></head><body>');
+    myWindow.document.writeln('Se usan las propiedades: <ul><li>height=200</li><li>width=300</li></ul>');
+    myWindow.document.write('<input type=button value=Cerrar onClick=window.close()>');
+    myWindow.document.write('</body></html>');"/>
+    <script>
+        //NO ABRIR CON LIVESERVER
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            background-color: bisque;
+        }
+
+        * {
+            text-align: center;
+        }
+
+        header, footer {
+            background-color: rgb(236, 185, 122);
+            width: 100%;
+            height: 50px;
+        }
+
+        main {
+            background-color: darksalmon;
+            height: 500px;
+            width: 100%;
+            display: inline-block;
+        }
+
+        .entradas {
+            display: inline;
+        }
+
+        div {
+            background-color: bisque;
+            margin: 10px;
+            width: 45%;
+        }
+
+        .primerDiv {
+            float: left;
+        }
+
+        .segundoDiv {
+            float: right;
+        }
+
+        footer {
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ejercicio 1 - DOM</h1>
+    </header>
+    <main>
+        <h2>Esto es el main</h2>
+        <div class="entradas">
+            <div class="primerDiv">Una Bicicleta de Fórmula 1: BMC Speedmachine</div>
+            <div class="segundoDiv">Bicis y patinetes siguen en auge en Zaragoza</div>
+        </div>
+    </main>
+    <footer>
+        <p>Ejercicio hecho por Victor Arcos</p>
+    </footer>
+    <script>
+        const constDiv1 = document.querySelector(".primerDiv");
+        const constDiv2 = document.querySelector(".segundoDiv");
+
+        constDiv1.addEventListener("click", function () {
+            constDiv1.style.height = "350px";
+            constDiv1.innerHTML = "<h1>Una Bicicleta de Fórmula 1: BMC Speedmachine</h1><p>Tras cuatro años de investigación, BMC y Red Bull Advanced Technologies presentan los resultados de un proyecto conjunto para tratar de desarrollar la bicicleta de carreras más rápida del mundo.";
+        });
+
+        constDiv2.addEventListener("click", function () {
+            constDiv2.style.height = "350px";
+            constDiv2.innerHTML = "<h1>Bicis y patinetes siguen en auge en Zaragoza</h1><p>El número de usuarios de bicicletas y patinetes no deja de crecer. La revolución que estos medios de transporte vivieron a consecuencia de la pandemia del coronavirus no se quedó ahí, sino que el volumen de ciudadanos que opta por estas alternativas para sus desplazamientos diarios es cada vez mayor. Es la conclusión que se desprende de las mediciones que está haciendo el Ayuntamiento de Zaragoza de los aforos que registran los carriles destinados a estos vehículos, que se han incrementado de media un 22% en los distintos puntos de la ciudad.";
+        });
+
+    
+
+    </script>
+</body>
+</html>

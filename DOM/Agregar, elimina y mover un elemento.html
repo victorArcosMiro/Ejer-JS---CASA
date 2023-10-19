@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación del DOM</title>
+</head>
+<body>
+    <h1>Manipulación del DOM</h1>
+    <ul id="miLista">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+    </ul>
+    <button id="agregar">Agregar Elemento</button>
+    <button id="eliminar">Eliminar Elemento</button>
+    <button id="mover">Mover Elemento</button>
+
+    <script>
+        // Accede a la lista ul por su ID
+        const lista = document.getElementById("miLista");
+
+        // Accede a los botones por su ID
+        const botonAgregar = document.getElementById("agregar");
+        const botonEliminar = document.getElementById("eliminar");
+        const botonMover = document.getElementById("mover");
+
+        // Agrega un nuevo elemento a la lista
+        botonAgregar.addEventListener("click", function() {
+            const nuevoElemento = document.createElement("li");
+            nuevoElemento.textContent = "Nuevo Elemento";
+            lista.appendChild(nuevoElemento);
+        });
+
+        // Elimina el último elemento de la lista
+        botonEliminar.addEventListener("click", function() {
+            const ultimoElemento = lista.lastElementChild;
+            if (ultimoElemento) {
+                lista.removeChild(ultimoElemento);
+            }
+        });
+
+        // Mueve el primer elemento al final de la lista
+        botonMover.addEventListener("click", function() {
+            const primerElemento = lista.firstElementChild;
+            if (primerElemento) {
+                lista.appendChild(primerElemento);
+            }
+        });
+    </script>
+</body>
+</html>
